@@ -1,0 +1,9 @@
+/* global css */
+/* main.css */
+.btn:focus {
+    outline: none !important;
+    outline-offset: none !important;
+}
+.main {
+    background: "black";
+}
