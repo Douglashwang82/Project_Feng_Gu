@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AppointmentForm from './components/appointmentform/AppointmentForm';
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ConfirmationPage from './components/confirmationpage/ConfirmationPage';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<BrandIntro />} />
         <Route path="/service/*" element={<AppointmentForm  service={selectedService} handleService={handleService} />} />
+        <Route path="/confirmation" element={<ConfirmationPage />} />
       </Routes>
     </div>
   );

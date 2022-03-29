@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import useStyles from './styles';
 import Accordion from 'react-bootstrap/Accordion';
+import { LinkContainer } from 'react-router-bootstrap';
 const AppointmentForm: FC<{ service: string, handleService: any }> = ({ service, handleService }) => {
     const classes = useStyles();
 
@@ -90,9 +91,11 @@ const AppointmentForm: FC<{ service: string, handleService: any }> = ({ service,
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
                 <Form.Group>
+                    <LinkContainer to="/confirmation">
                     <Button variant="primary" type="submit">
                         Get Budget
                     </Button>
+                    </LinkContainer>
                 </Form.Group>
             </Form>
         </div>
