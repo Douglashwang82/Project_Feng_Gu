@@ -5,5 +5,9 @@ export default makeStyles(() => ({
         margin:"auto",
         marginTop:"10px",
         width:"50%",
+        height:"25%",
+    },
+    accordion:{
+        background:"black",
     }
     }));

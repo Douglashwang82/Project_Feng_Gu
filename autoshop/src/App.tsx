@@ -11,10 +11,12 @@ import ConfirmationPage from './components/confirmationpage/ConfirmationPage';
 import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 type FormData = {
-  email: string;
-  make: string;
-  year: string;
-  service:string[];
+  AppointmentMake:string,
+  AppointmentModel:string,
+  AppointmentYear:string,
+  AppointmentVIN:string,
+  AppointmentEmail:string,
+  AppointmentServices:string[],
 }
 
 function App() {
@@ -26,9 +28,9 @@ function App() {
   };
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const [data, setData] = useState({});
+  const [data, setData] = useState<FormData>({AppointmentMake:"", AppointmentModel:"",AppointmentYear:"",AppointmentServices:[],AppointmentEmail:"",AppointmentVIN:""});
   const navigate = useNavigate();
-  const onSubmit = (data:object) => {
+  const onSubmit = (data:FormData) => {
     setData(data);
     navigate("./confirmation");
 };
