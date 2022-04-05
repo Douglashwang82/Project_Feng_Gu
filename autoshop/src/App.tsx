@@ -10,6 +10,7 @@ import ConfirmationPage from './components/confirmationpage/ConfirmationPage';
 
 import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import ThankYouPage from './components/thankyoupage/ThankYouPage';
 type FormData = {
   AppointmentMake:string,
   AppointmentModel:string,
@@ -41,7 +42,9 @@ function App() {
         <Route path="/home" element={<BrandIntro />} />
         <Route path="/service/*" element={<AppointmentForm register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/>} />
         <Route path="/confirmation" element={<ConfirmationPage  data={data}/>} />
+        <Route path="/thankyou" element={<ThankYouPage />} />
       </Routes>
+      {/* <ThankYouPage></ThankYouPage> */}
     </div>
   );
 }
