@@ -1,15 +1,20 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Typography } from '@material-ui/core';
 import useStyles from './styles';
 import Button from 'react-bootstrap/Button';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+
 const ConfirmationPage: FC<{ data: any }> = ({ data }) => {
     const classes = useStyles();
     const url = "http://localhost:8000/services";
     const navigate = useNavigate();
+    const [isWaiting, setIsWaiting] = useState(0);
+
     const handleConfirmation = () => {
+        setIsWaiting(1);
         axios
         .post(url, data, {
           headers: {
@@ -74,7 +79,9 @@ const ConfirmationPage: FC<{ data: any }> = ({ data }) => {
                     <Row key={key}><Col><Typography>{x}</Typography></Col></Row>
                 )
                 )}
-            <Button onClick={handleConfirmation}>Get Budget</Button>
+                {isWaiting==0 ? <Button onClick={handleConfirmation}>Get Budget</Button> : <Spinner animation ="border"></Spinner>}
+            {/* <Button onClick={handleConfirmation}>Get Budget</Button>
+            <Spinner animation ="border"></Spinner> */}
             </Container>
         </div>
     );
