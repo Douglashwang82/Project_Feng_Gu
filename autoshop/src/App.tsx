@@ -11,6 +11,7 @@ import ConfirmationPage from './components/confirmationpage/ConfirmationPage';
 import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import ThankYouPage from './components/thankyoupage/ThankYouPage';
+import GooReviews from './components/gooreviews/GooReviews';
 type FormData = {
   AppointmentMake:string,
   AppointmentModel:string,
@@ -45,6 +46,7 @@ function App() {
         <Route path="/thankyou" element={<ThankYouPage />} />
       </Routes>
       {/* <ThankYouPage></ThankYouPage> */}
+      <GooReviews></GooReviews>
     </div>
   );
 }

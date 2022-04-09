@@ -1,36 +1,47 @@
 import { FC } from 'react'
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+
 import { LinkContainer } from 'react-router-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
-import useStyles from './styles';
+import Button from 'react-bootstrap/Button';
+// import useStyles from './styles';
+// import {Link, Typography} from '@mui/material';
+// import {Grid} from '@mui/material';
+
+import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavbarElements';
+
+
 const MyNavbar: FC<{ handleService: any }> = ({ handleService }) => {
-    const classes = useStyles();
+    // const classes = useStyles();
 
     return (
         <>
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <LinkContainer to="/home">
-                        <Navbar.Brand>
-                            Auto Repair
-                        </Navbar.Brand>
-                    </LinkContainer>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-
-                            <LinkContainer to="/service">
-                                <Nav.Link >Service</Nav.Link>
-                            </LinkContainer>
-                            
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+        <Nav>
+            <NavLink to="/home">
+                <h1>Logo</h1>
+            </NavLink>
+            <Bars />
+            <NavMenu>
+                <NavLink to='/about' activeStyle>
+                    About
+                </NavLink>
+                <NavLink to='/service' activeStyle>
+                    Services
+                </NavLink>
+                <NavLink to='/contact-us' activeStyle>
+                    Contact Us
+                </NavLink>
+                <NavLink to='/sign-up' activeStyle>
+                    Sign Up
+                </NavLink>
+            </NavMenu>
+                <NavBtn>
+                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+            </NavBtn>
+        </Nav>
         </>
     );
 }
