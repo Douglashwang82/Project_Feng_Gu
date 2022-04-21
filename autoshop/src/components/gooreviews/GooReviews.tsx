@@ -11,10 +11,15 @@ const GooReviews: FC = () => {
 
     ];
     return (
-        <>
+        <div className={classes.carddiv}>
         <CardGroup>
         <Card>
             <Card.Title>A card</Card.Title>
+            <Card.Body>
+                <Card.Text>
+                    card text
+                </Card.Text>
+            </Card.Body>
         </Card>
         <Card>
             <Card.Title>A card</Card.Title>
@@ -23,7 +28,7 @@ const GooReviews: FC = () => {
             <Card.Title>A card</Card.Title>
         </Card>
         </CardGroup>
-        </>
+        </div>
     );
 }
 

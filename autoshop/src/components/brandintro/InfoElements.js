@@ -4,19 +4,25 @@ import Button from 'react-bootstrap/Button'
 
 export const MyCard = styled(Card)`s
     color: #fff;
-    width: 80%;
+    width: 100%;
     margin:auto;
-    height: 400px;
+    height: 600px;
     min-width:500px;
     font-size:30px;
-    border: solid;
+    background:#FFB511;
+    z-index:10;
+    border-style: none;
 `
 
 export const MyCardBtn = styled(Button)`
-    background:#000;
-    z-index:10;
-    display:flex;
-    top:100px;
-    width:100px;
+    top:50%;
+    left: 70%;
+    position: relative;
+    width: 10%;
+    min-width:100px;
     
+`
+export const AppointmentBtn = styled(Button)`
+    background: #1295d8;
+    color: #fff;
 `

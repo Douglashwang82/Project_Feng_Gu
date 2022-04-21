@@ -5,7 +5,8 @@ import Card from 'react-bootstrap/Card';
 
 
 export const Nav = styled.nav`
-    background: #000;
+    background:#FFB511;
+    // background-color:transparent; (for opacity bg)
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -14,14 +15,14 @@ export const Nav = styled.nav`
 `
 
 export const NavLink = styled(Link)`
-    color: #fff;
+    color: #000;
     display: flex;
+    font-weight:800;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-
     &.active {
         color: #15cdfc;
     }
