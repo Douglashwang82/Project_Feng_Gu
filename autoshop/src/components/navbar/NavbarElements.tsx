@@ -5,26 +5,32 @@ import Card from 'react-bootstrap/Card';
 
 
 export const Nav = styled.nav`
-    background:#FFB511;
+    // background:#FFB511;
     // background-color:transparent; (for opacity bg)
     height: 80px;
     display: flex;
     justify-content: space-between;
+    align-items:center;
     padding: 0.5rem calc((100vw - 1000px) / 2);
-    z-index:10;
+    position:relative;
+    z-index:4;
 `
 
 export const NavLink = styled(Link)`
     color: #000;
+    opcity:0.5;
     display: flex;
-    font-weight:800;
+    font-weight:700;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
     &.active {
-        color: #15cdfc;
+        color:#706c60;
+    }
+    &: hover {
+        color:#706c60;
     }
 `
 
@@ -77,9 +83,8 @@ export const NavBtnLink = styled(Link)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: #fff;
-        color:#010606;
+        color:#BABABA;
     }
-    
 `
 
 export const MyCard = styled(Card)`

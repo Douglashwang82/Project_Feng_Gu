@@ -12,6 +12,8 @@ import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import ThankYouPage from './components/thankyoupage/ThankYouPage';
 import GooReviews from './components/gooreviews/GooReviews';
+import { GoogleReview } from './components/googlereview/GoogleReview';
+import Footer from './components/footer/Footer';
 type FormData = {
   AppointmentMake:string,
   AppointmentModel:string,
@@ -38,15 +40,16 @@ function App() {
 };
   return (
     <div className="App">
-      <MyNavbar handleService={handleService}></MyNavbar>
+      {/* <MyNavbar handleService={handleService}></MyNavbar>
       <Routes>
         <Route path="/home" element={<BrandIntro />} />
         <Route path="/service/*" element={<AppointmentForm register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/>} />
         <Route path="/confirmation" element={<ConfirmationPage  data={data}/>} />
         <Route path="/thankyou" element={<ThankYouPage />} />
-      </Routes>
+      </Routes> */}
       {/* <ThankYouPage></ThankYouPage> */}
-      <GooReviews></GooReviews>
+      {/* <GoogleReview></GoogleReview> */}
+      <Footer></Footer>
     </div>
   );
 }

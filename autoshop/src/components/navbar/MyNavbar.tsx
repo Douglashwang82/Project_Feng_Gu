@@ -21,26 +21,27 @@ const MyNavbar: FC<{ handleService: any }> = ({ handleService }) => {
         <>
         <Nav>
             <NavLink to="/home">
-                <h1>Logo</h1>
+                <h1>Feng Gu</h1>
             </NavLink>
             <Bars />
             <NavMenu>
-                <NavLink to='/about' activeStyle>
+                <NavLink to='/about'>
                     About
                 </NavLink>
-                <NavLink to='/service' activeStyle>
+                <NavLink to='/service' >
                     Services
                 </NavLink>
-                <NavLink to='/contact-us' activeStyle>
+                <NavLink to='/contact-us'>
                     Contact Us
                 </NavLink>
-                <NavLink to='/sign-up' activeStyle>
+                {/* <NavLink to='/sign-up'>
                     Sign Up
-                </NavLink>
+                </NavLink> */}
             </NavMenu>
-                <NavBtn>
+                {/* <NavBtn>
                 <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-            </NavBtn>
+            </NavBtn> */}
+            <span></span>
         </Nav>
         </>
     );
