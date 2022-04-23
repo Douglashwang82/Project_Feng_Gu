@@ -4,8 +4,9 @@ import Button from '@mui/material/Button';
 import {Trail as PreTrail} from './helpers/PreTrail';
 
 export const Container = styled.div`
-background-color: #FFB511;
-// background: radial-gradient(circle at -26% -36%, #FFB511, lightyellow);
+// background-color: #FFB511;
+// background-color: white;
+background: radial-gradient(circle at -26% -36%, #FFB511, lightyellow);
 display: grid;
 align-items: center;
 /* height: 100%; */

@@ -9,12 +9,14 @@ import { useForm } from "react-hook-form";
 import { Container ,Card} from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 
+import {
+    MyContainer
+} from './AppointmentElement';
+
 const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> = ({ register, handleSubmit, onSubmit }) => {
     const classes = useStyles();
     return (
-        <div className={classes.form}>
-
-
+        <MyContainer>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Container>
                     <Form.Group >
@@ -114,7 +116,7 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                     {/* </LinkContainer> */}
                 </Form.Group>
             </Form>
-        </div>
+        </MyContainer>
     );
 }
 

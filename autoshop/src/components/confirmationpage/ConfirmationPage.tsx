@@ -6,6 +6,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
+import {
+    MyContainer
+} from "./ConfirmPageElements";
+
 
 const ConfirmationPage: FC<{ data: any }> = ({ data }) => {
     const classes = useStyles();
@@ -30,12 +34,12 @@ const ConfirmationPage: FC<{ data: any }> = ({ data }) => {
       .catch(function(err){
         console.log(`err ${err}`);
         alert(`err ${err}`);
+        navigate("/thankyou");
       });
     };
 
     return (
-        <div className={classes.confirmation}>
-            {console.log(data)}
+            <MyContainer>
             <Container>
                 <Row>
                     <Col><Typography>Make:</Typography></Col>
@@ -75,15 +79,16 @@ const ConfirmationPage: FC<{ data: any }> = ({ data }) => {
                 <Row>
                     <Typography>Services:</Typography>
                 </Row>
-                {data.AppointmentServices.map((x: string, key: string) => (
+                {Array.isArray(data.AppointmentServices) ? 
+                data.AppointmentServices.map((x: string, key: string) => (
                     <Row key={key}><Col><Typography>{x}</Typography></Col></Row>
                 )
-                )}
+                ) : console.log("nothing here")}
                 {isWaiting==0 ? <Button onClick={handleConfirmation}>Get Budget</Button> : <Spinner animation ="border"></Spinner>}
             {/* <Button onClick={handleConfirmation}>Get Budget</Button>
             <Spinner animation ="border"></Spinner> */}
             </Container>
-        </div>
+            </MyContainer>
     );
 }
 

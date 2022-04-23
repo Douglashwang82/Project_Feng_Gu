@@ -14,6 +14,9 @@ import ThankYouPage from './components/thankyoupage/ThankYouPage';
 import GooReviews from './components/gooreviews/GooReviews';
 import { GoogleReview } from './components/googlereview/GoogleReview';
 import Footer from './components/footer/Footer';
+import AboutPage from './components/aboutpage/AboutPage';
+import ContactPage from './components/contactpage/ContactPage';
+
 type FormData = {
   AppointmentMake:string,
   AppointmentModel:string,
@@ -32,7 +35,7 @@ function App() {
   };
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const [data, setData] = useState<FormData>({AppointmentMake:"", AppointmentModel:"",AppointmentYear:"",AppointmentServices:[],AppointmentEmail:"",AppointmentVIN:""});
+  const [data, setData] = useState<FormData>({AppointmentMake:"", AppointmentModel:"",AppointmentYear:"",AppointmentServices:["nothing"],AppointmentEmail:"",AppointmentVIN:""});
   const navigate = useNavigate();
   const onSubmit = (data:FormData) => {
     setData(data);
@@ -40,15 +43,16 @@ function App() {
 };
   return (
     <div className="App">
-      {/* <MyNavbar handleService={handleService}></MyNavbar>
+      <MyNavbar handleService={handleService}></MyNavbar>
       <Routes>
-        <Route path="/home" element={<BrandIntro />} />
-        <Route path="/service/*" element={<AppointmentForm register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/>} />
-        <Route path="/confirmation" element={<ConfirmationPage  data={data}/>} />
+        <Route path="/home" element={<div><BrandIntro /><GoogleReview></GoogleReview></div>} />
+        <Route path="/services/*" element={<AppointmentForm register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/> } />
+        <Route path="/confirmation" element={<ConfirmationPage  data={data? data:[]}/>} />
         <Route path="/thankyou" element={<ThankYouPage />} />
-      </Routes> */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       {/* <ThankYouPage></ThankYouPage> */}
-      {/* <GoogleReview></GoogleReview> */}
       <Footer></Footer>
     </div>
   );

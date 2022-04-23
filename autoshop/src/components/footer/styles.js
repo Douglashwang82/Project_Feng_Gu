@@ -2,9 +2,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
     footer: {
-        background:"green",
+        background:"black",
         width: "100%",
-        height:"100%",
+        height:"500px",
         marginTop:"-100px",
         marginBottom:"-100px",
         zIndex:"1",
@@ -25,6 +25,7 @@ export default makeStyles(() => ({
         columnGap:"50px",
         alignContent:"center",
         justifyContent:"center",
+        color:"white",
     }
 }
 ));

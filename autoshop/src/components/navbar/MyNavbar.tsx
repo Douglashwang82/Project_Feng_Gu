@@ -28,11 +28,11 @@ const MyNavbar: FC<{ handleService: any }> = ({ handleService }) => {
                 <NavLink to='/about'>
                     About
                 </NavLink>
-                <NavLink to='/service' >
+                <NavLink to='/services' >
                     Services
                 </NavLink>
-                <NavLink to='/contact-us'>
-                    Contact Us
+                <NavLink to='/contact'>
+                    Contact
                 </NavLink>
                 {/* <NavLink to='/sign-up'>
                     Sign Up
