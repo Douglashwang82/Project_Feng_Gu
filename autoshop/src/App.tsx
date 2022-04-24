@@ -35,7 +35,7 @@ function App() {
   };
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const [data, setData] = useState<FormData>({AppointmentMake:"", AppointmentModel:"",AppointmentYear:"",AppointmentServices:["nothing"],AppointmentEmail:"",AppointmentVIN:""});
+  const [data, setData] = useState<FormData>({AppointmentMake:"", AppointmentModel:"",AppointmentYear:"",AppointmentServices:[],AppointmentEmail:"",AppointmentVIN:""});
   const navigate = useNavigate();
   const onSubmit = (data:FormData) => {
     setData(data);

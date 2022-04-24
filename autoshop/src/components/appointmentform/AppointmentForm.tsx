@@ -6,27 +6,51 @@ import Accordion from 'react-bootstrap/Accordion';
 import { LinkContainer } from 'react-router-bootstrap';
 import { constants } from 'buffer';
 import { useForm } from "react-hook-form";
-import { Container ,Card} from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
+import { VisualPicker, VisualPickerOption } from 'react-rainbow-components';
+import {
+    SERVICES,
+    YEARS
+} from '../../constants/global';
 
 import {
-    MyContainer
+    MyContainer,
+    PickerGroup,
+    PickerOption,
+    PickerLabel,
+    MyCheckBox,
+    MyForm,
 } from './AppointmentElement';
 
+
 const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> = ({ register, handleSubmit, onSubmit }) => {
-    const classes = useStyles();
+
     return (
         <MyContainer>
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <MyForm onSubmit={handleSubmit(onSubmit)}>
                 <Container>
                     <Form.Group >
                         <Form.Label>Services</Form.Label>
-                        <Accordion >
-                            <Accordion.Item  eventKey="0">
+
+                        {/* Picker */}
+                        <PickerGroup>
+                            {SERVICES.map((service, key) => (
+                                <PickerOption key={key}>
+                                    <MyCheckBox size="xxl" value={service} {...register("AppointmentServices")}/>
+                                    {/* <Form.Check size="lg" value={service} {...register("AppointmentServices")}></Form.Check> */}
+                                    <PickerLabel>{service}</PickerLabel>
+                                </PickerOption>
+                            ))}
+                        </PickerGroup>
+
+
+                        {/* <Accordion >
+                            <Accordion.Item eventKey="0">
                                 <Accordion.Header>Repair</Accordion.Header>
                                 <Accordion.Body>
-                                    <Form.Check size = {{height:"100px"}} value="r1" label="r1" {...register("service")}></Form.Check>
-                                    <Form.Check size = "lg" alue="r2" label="r2" {...register("service")}></Form.Check>
+                                    <Form.Check size={{ height: "100px" }} value="r1" label="r1" {...register("service")}></Form.Check>
+                                    <Form.Check size="lg" alue="r2" label="r2" {...register("service")}></Form.Check>
                                     <Form.Check value="r3" label="r3" {...register("AppointmentServices")}></Form.Check>
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -50,7 +74,7 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                                     <Form.Check value="t3" label="t3" {...register("AppointmentServices")}></Form.Check>
                                 </Accordion.Body>
                             </Accordion.Item>
-                        </Accordion >
+                        </Accordion > */}
 
                     </Form.Group>
                     <Row >
@@ -59,9 +83,9 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                                 <Form.Label>Year</Form.Label>
                                 <Form.Select size="sm" aria-label="Default select example" {...register("AppointmentYear")}>
                                     <option>Open this select menu</option>
-                                    <option value="2001" >2001</option>
-                                    <option value="2002" >2002</option>
-                                    <option value="2003" >2003</option>
+                                    {YEARS.map((value, key) => (
+                                                                            <option value="2001" key={key}>{value} </option>
+                                    ))}
                                 </Form.Select>
                             </Form.Group>
                         </Col>
@@ -94,7 +118,7 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                     </Row>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label >Email address</Form.Label>
-                        <Form.Control  size="sm" type="email" placeholder="Enter email" {...register("AppointmentEmail")} />
+                        <Form.Control size="sm" type="email" placeholder="Enter email" {...register("AppointmentEmail")} />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
@@ -115,7 +139,7 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                     </Button>
                     {/* </LinkContainer> */}
                 </Form.Group>
-            </Form>
+            </MyForm>
         </MyContainer>
     );
 }

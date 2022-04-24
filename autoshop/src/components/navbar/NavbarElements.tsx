@@ -27,10 +27,12 @@ export const NavLink = styled(Link)`
     height: 100%;
     cursor: pointer;
     &.active {
-        color:#706c60;
+        color:blue;
+        // color: LiteBlue;
     }
     &: hover {
-        color:#706c60;
+        // color:#706c60;
+        color: LiteBlue;
     }
 `
 
@@ -84,6 +86,7 @@ export const NavBtnLink = styled(Link)`
         transition: all 0.2s ease-in-out;
         background: #fff;
         color:#BABABA;
+        color: LiteBlue;
     }
 `
 

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 
 export const MyContainer = styled.div`
-background-color: #FFB511;
+//background-color: #FFB511;
 // background: radial-gradient(circle at -26% -36%, #FFB511, lightyellow);
+background: white;
 display: grid;
 align-items: center;
 /* height: 100%; */
