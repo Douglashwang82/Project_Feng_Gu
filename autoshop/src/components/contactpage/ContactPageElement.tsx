@@ -34,6 +34,7 @@ export const Icon = styled.img``
 
 export const Text = styled.p`
 text-align: center;
+margin:auto;
 `
 
 export const MyLink =  styled(Link)``
