@@ -8,7 +8,6 @@ import { constants } from 'buffer';
 import { useForm } from "react-hook-form";
 import { Container, Card } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
-import { VisualPicker, VisualPickerOption } from 'react-rainbow-components';
 import {
     SERVICES,
     YEARS

@@ -1,0 +1,5 @@
+const GOOGLEAPIKEY = "AIzaSyBx7lbVSeDHjxp7cAMAENMZSNucBzW3Z4w";
+
+export {
+    GOOGLEAPIKEY
+}

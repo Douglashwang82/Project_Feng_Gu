@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { AiFillPhone, AiFillEnvironment, AiFillClockCircle } from "react-icons/ai";
-
+import {
+  GOOGLEAPIKEY
+} from '../../constants/private';
 import {
     Container,
     CardFrame,
@@ -31,7 +33,7 @@ const AboutPage: FC = () => {
         <Text>Monday - Friday: 7am - 5pm</Text>
         </Section>
       </CardFrame>
-      <MyIframe style={{"border":"1"}} loading="lazy" src="https://www.google.com/maps/embed/v1/search?q=24072%20Madeiros%20Avenue%2C%20%E5%B8%8C%E6%B4%BB%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9E%E7%BE%8E%E5%9C%8B&key=AIzaSyBx7lbVSeDHjxp7cAMAENMZSNucBzW3Z4w"/>
+      <MyIframe style={{"border":"1"}} loading="lazy" src={`https://www.google.com/maps/embed/v1/search?q=24072%20Madeiros%20Avenue%2C%20%E5%B8%8C%E6%B4%BB%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9E%E7%BE%8E%E5%9C%8B&key=${GOOGLEAPIKEY}`}/>
     </Container>
   );
 }
