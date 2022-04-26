@@ -11,13 +11,16 @@ display: grid;
 align-items: center;
 /* height: 100%; */
 justify-content: center;
-height: 800px;
-grid-template-columns:auto auto;
+height: 100%;
+grid-template-columns:auto;
 border-bottom-left-radius: 50px;
 border-bottom-right-radius: 50px;
 position:relative;
 margin-top:-50px;
+padding-bottom:50px;
+padding-top:50px;
 z-index:3;
+
 `
 
 
@@ -48,11 +51,13 @@ export const MyCheckBox = styled.input.attrs({ type: 'checkbox' })`
 `
 
 
-export const PickerLabel = styled(Typography)`
+export const PickerLabel = styled.p`
     font-style:bold;
     max-width: 200px;
     min-width: 200px;
     text-align: center;
+    margin:auto;
+    font-weight:700;
     
 `
 

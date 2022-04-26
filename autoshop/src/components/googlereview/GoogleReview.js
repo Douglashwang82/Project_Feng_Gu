@@ -13,6 +13,10 @@ import {
     ReviewStarEmpty,
     ReviewExpandButton,
     ReviewArea,
+    ReviewShadow1,
+    ReviewShadow2,
+    ReviewShadow3,
+    ReviewGlass,
 
 } from './GoogleReviewElements';
 
@@ -20,6 +24,7 @@ export const GoogleReview = () => {
     return (
         <ReviewArea>
             <ReviewGroup>
+                <ReviewShadow1>
                 <ReviewFrame>
                     <ReviewSection>
                         <ReviewAvatar />
@@ -37,41 +42,9 @@ export const GoogleReview = () => {
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
+                </ReviewShadow1>
 
-                <ReviewFrame>
-                    <ReviewSection>
-                        <ReviewAvatar />
-                        <ReviewName >Josh Allen</ReviewName>
-                    </ReviewSection>
-                    <ReviewStars >
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarEmpty></ReviewStarEmpty>
-                    </ReviewStars>
-                    <ReviewText>
-                        It is a good places. It is a good places. It is
-                    </ReviewText>
-                </ReviewFrame>
-
-                <ReviewFrame>
-                    <ReviewSection>
-                        <ReviewAvatar />
-                        <ReviewName >Josh Allen</ReviewName>
-                    </ReviewSection>
-                    <ReviewStars >
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    <ReviewStarFull></ReviewStarFull>
-                    </ReviewStars>
-                    <ReviewText>
-                        It is a good places.
-                    </ReviewText>
-                </ReviewFrame>
-
+                <ReviewShadow2>
                 <ReviewFrame>
                     <ReviewSection>
                         <ReviewAvatar />
@@ -89,7 +62,8 @@ export const GoogleReview = () => {
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
-
+                </ReviewShadow2>
+                                <ReviewShadow3>
                 <ReviewFrame>
                     <ReviewSection>
                         <ReviewAvatar />
@@ -107,6 +81,12 @@ export const GoogleReview = () => {
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
+                <ReviewGlass>
+                </ReviewGlass>
+                </ReviewShadow3>
+
+
+  
             </ReviewGroup>
         </ReviewArea>
     )

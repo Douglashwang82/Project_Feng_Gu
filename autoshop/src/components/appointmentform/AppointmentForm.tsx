@@ -21,12 +21,19 @@ import {
     MyCheckBox,
     MyForm,
 } from './AppointmentElement';
+import { FaBuromobelexperte } from 'react-icons/fa';
+import { Typography } from '@mui/material';
 
 
 const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> = ({ register, handleSubmit, onSubmit }) => {
 
     return (
         <MyContainer>
+            <Row>
+                <Col style={{"textAlign":"center"}}>
+                    <h1>Get Customize Budget.</h1>
+                </Col>
+            </Row>
             <MyForm onSubmit={handleSubmit(onSubmit)}>
                 <Container>
                     <Form.Group >
@@ -76,6 +83,12 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                         </Accordion > */}
 
                     </Form.Group>
+                    <Row>
+                        <Col>
+                        <Form.Label>Extra Information</Form.Label>
+                        <Form.Control  as="textarea" rows={3} placeholder="Shortly describe the car situation..."/>
+                        </Col>
+                    </Row>
                     <Row >
                         <Col >
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -115,13 +128,17 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                             </Form.Group>
                         </Col>
                     </Row>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        
+                    <Row>
+                        <Col>
                         <Form.Label >Email address</Form.Label>
                         <Form.Control size="sm" type="email" placeholder="Enter email" {...register("AppointmentEmail")} />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
-                    </Form.Group>
+                        </Col>                                        
+                    </Row>
+                    
                 </Container>
                 {/* <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
@@ -131,13 +148,16 @@ const AppointmentForm: FC<{ register: any, handleSubmit: any, onSubmit: any }> =
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
-                <Form.Group>
-                    {/* <LinkContainer to="/confirmation"> */}
+                <Row>
+                    <Col style={{"textAlign":"right", "marginRight":"10px"}}>
                     <Button variant="primary" type="submit">
                         Get Budget
                     </Button>
+                    </Col>
+                </Row>
+                    {/* <LinkContainer to="/confirmation"> */}
                     {/* </LinkContainer> */}
-                </Form.Group>
+
             </MyForm>
         </MyContainer>
     );

@@ -8,25 +8,49 @@ export const Container = styled.div`
 //background-color: #FFB511;
 // background: radial-gradient(circle at -26% -36%, #FFB511, lightyellow);
 background: white;
-display: grid;
-align-items: center;
-/* height: 100%; */
-justify-content: center;
+// display: grid;
+// align-items: center;
+// height: 100%;
+// justify-content: center;
 height: 800px;
-grid-template-columns: auto auto;
-// grid-template: 150px/ auto auto;
+    // grid-template:
+    // "a a"
+    // "b c"
+    // "b c"
+    // "b c"
+    // "b c"/ 450px 150px;
 border-bottom-left-radius: 50px;
 border-bottom-right-radius: 50px;
 position:relative;
-margin-top:-100px;
 z-index:3;
-column-gap: 200px;
+// column-gap:200px;
+padding-top:50px;
 `
+export const SubCard = styled.div`
+// display:grid;
+// border:solid;
+// grid-template:
+// "a a" 100px
+// "b c"/ 450px 150px;
+// justify-content:center;
+width: 60%;
+// margin:auto;
+// align-items:center;
+// column-gap:100px;
+// border:solid;
+margin:auto;
+`
+export const InfoArea = styled.div`
+    display:grid;
+    grid-template-columns: 60% 30%;
+    padding-top:100px;
+    column-gap:50px;
+`
+
 
 
 export const CardFrame = styled(Card)`
 display:grid;
-width:150%;
 height: 300px;
 `
 
@@ -49,6 +73,6 @@ export const Section = styled.div`
 `
 
 export const MyIframe = styled.iframe`
-    width:400px;
-    height:300px;
+    width:600px;
+    height:400px;
 `
