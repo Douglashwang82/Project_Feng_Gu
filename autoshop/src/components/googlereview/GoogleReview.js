@@ -1,6 +1,7 @@
 import React from 'react'
 import { ImStarEmpty } from "react-icons/im";
-
+// import Fade from 'react-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 import {
     ReviewFrame,
     ReviewAvatar,
@@ -23,8 +24,9 @@ import {
 export const GoogleReview = () => {
     return (
         <ReviewArea>
+            <Fade direction='up'>
             <ReviewGroup>
-                <ReviewShadow1>
+                <ReviewShadow3>
                 <ReviewFrame>
                     <ReviewSection>
                         <ReviewAvatar />
@@ -38,13 +40,13 @@ export const GoogleReview = () => {
                     <ReviewStarEmpty></ReviewStarEmpty>
                     </ReviewStars>
                     <ReviewText>
-                        It is a good places.
+                    The common perception that nearly everyone in America seemed to have acquired the Omicron variant last winter may not have been far from the truth. By February 2022, nearly 60 percent of the population had been infected with the coronavirus, almost double the proportion seen in December 2021, according to data released on Tuesday by the Centers for Disease Control and Prevention.
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
-                </ReviewShadow1>
+                </ReviewShadow3>
 
-                <ReviewShadow2>
+                <ReviewShadow3>
                 <ReviewFrame>
                     <ReviewSection>
                         <ReviewAvatar />
@@ -58,11 +60,11 @@ export const GoogleReview = () => {
                     <ReviewStarEmpty></ReviewStarEmpty>
                     </ReviewStars>
                     <ReviewText>
-                        It is a good places.
+                    The common perception that nearly everyone in America seemed to have acquired the Omicron variant last winter may not have been far from the truth. By February 2022, nearly 60 percent of the population had been infected with the coronavirus, almost double the proportion seen in December 2021, according to data released on Tuesday by the Centers for Disease Control and Prevention.
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
-                </ReviewShadow2>
+                </ReviewShadow3>
                                 <ReviewShadow3>
                 <ReviewFrame>
                     <ReviewSection>
@@ -77,7 +79,29 @@ export const GoogleReview = () => {
                     <ReviewStarEmpty></ReviewStarEmpty>
                     </ReviewStars>
                     <ReviewText>
-                        It is a good places.
+                    The common perception that nearly everyone in America seemed to have acquired the Omicron variant last winter may not have been far from the truth. By February 2022, nearly 60 percent of the population had been infected with the coronavirus, almost double the proportion seen in December 2021, according to data released on Tuesday by the Centers for Disease Control and Prevention.
+                    </ReviewText>
+                    <ReviewExpandButton>Expand</ReviewExpandButton>
+                </ReviewFrame>
+                <ReviewGlass>
+                </ReviewGlass>
+                </ReviewShadow3>
+
+                <ReviewShadow3>
+                <ReviewFrame>
+                    <ReviewSection>
+                        <ReviewAvatar />
+                        <ReviewName >Josh Allen</ReviewName>
+                    </ReviewSection>
+                    <ReviewStars >
+                    <ReviewStarFull></ReviewStarFull>
+                    <ReviewStarFull></ReviewStarFull>
+                    <ReviewStarFull></ReviewStarFull>
+                    <ReviewStarEmpty></ReviewStarEmpty>
+                    <ReviewStarEmpty></ReviewStarEmpty>
+                    </ReviewStars>
+                    <ReviewText>
+                    The common perception that nearly everyone in America seemed to have acquired the Omicron variant last winter may not have been far from the truth. By February 2022, nearly 60 percent of the population had been infected with the coronavirus, almost double the proportion seen in December 2021, according to data released on Tuesday by the Centers for Disease Control and Prevention.
                     </ReviewText>
                     <ReviewExpandButton>Expand</ReviewExpandButton>
                 </ReviewFrame>
@@ -88,6 +112,7 @@ export const GoogleReview = () => {
 
   
             </ReviewGroup>
+            </Fade>
         </ReviewArea>
     )
 }

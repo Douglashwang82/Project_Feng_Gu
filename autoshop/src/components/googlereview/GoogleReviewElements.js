@@ -5,15 +5,28 @@ import styled from 'styled-components';
 import { ImStarEmpty, ImStarFull } from "react-icons/im";
 import { Button } from '@mui/material';
 import { Link } from '@mui/material';
+
+export const ReviewArea = styled.div`
+    height:550px;
+    width:100%;
+    margin:auto;
+    background:#141414;
+    margin-top: -100px;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background:#6C45DA;
+    z-index: 8;
+    ${'' /* background: radial-gradient(circle at -26% -36%, lightyellow, darkblue); */}
+`
+
 export const ReviewGroup = styled.div`
     display:grid;
-    grid-template-columns: auto auto auto;
-    width: 70%;
+    grid-template-columns: auto auto auto auto auto;
+    width: 80%;
     column-gap: 50px;
     padding-top:150px;
     margin:auto;
-    
-
 `
 
 export const ReviewFrame = styled.div`
@@ -24,10 +37,13 @@ export const ReviewFrame = styled.div`
     background:white;
     padding-top:10px;
     position:relative;
-    z-index:1;
-    background-color: rgba(255, 255, 255, .15);  
- backdrop-filter: blur(5px);
- color:white;
+    z-index:8;
+
+    // glass effect ...
+    // background-color: rgba(255, 255, 255, .15);  
+    // backdrop-filter: blur(5px);
+
+    
     
 `
 export const ReviewSection = styled.div`
@@ -74,18 +90,6 @@ export const ReviewExpandButton = styled(Link)`
     padding-left:10px;
 `
 
-export const ReviewArea = styled.div`
-    height:600px;
-    width:100%;
-    margin:auto;
-    background:#141414;
-    margin-top: -100px;
-    z-index: 2;
-    position: relative;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    ${'' /* background: radial-gradient(circle at -26% -36%, lightyellow, darkblue); */}
-`
 export const ReviewMiddle = styled.div`
 
 `

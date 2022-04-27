@@ -11,12 +11,12 @@ import ConfirmationPage from './components/confirmationpage/ConfirmationPage';
 import {useForm} from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import ThankYouPage from './components/thankyoupage/ThankYouPage';
-import GooReviews from './components/gooreviews/GooReviews';
 import { GoogleReview } from './components/googlereview/GoogleReview';
 import Footer from './components/footer/Footer';
 import AboutPage from './components/aboutpage/AboutPage';
 import ContactPage from './components/contactpage/ContactPage';
-
+import SubPageOne from './components/subpageone/SubPageOne';
+import SubPageTwo from './components/subpagetwo/SubPageTwo';
 type FormData = {
   AppointmentMake:string,
   AppointmentModel:string,
@@ -45,7 +45,13 @@ function App() {
     <div className="App">
       <MyNavbar handleService={handleService}></MyNavbar>
       <Routes>
-        <Route path="/home" element={<div><BrandIntro /><GoogleReview></GoogleReview></div>} />
+        <Route path="/home" element={
+        <div>
+          <BrandIntro />
+          <SubPageOne />
+          <GoogleReview />
+          <SubPageTwo />
+        </div>} />
         <Route path="/services/*" element={<AppointmentForm register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/> } />
         <Route path="/confirmation" element={<ConfirmationPage  data={data? data:[]}/>} />
         <Route path="/thankyou" element={<ThankYouPage />} />
