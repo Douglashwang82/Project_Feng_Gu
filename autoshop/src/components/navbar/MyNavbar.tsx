@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 // import {Link, Typography} from '@mui/material';
 // import {Grid} from '@mui/material';
 
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, BrandLabel} from './NavbarElements';
+import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, BrandLabel, NavLinkBrand} from './NavbarElements';
 
 
 const MyNavbar: FC<{ handleService: any }> = ({ handleService }) => {
@@ -20,9 +20,9 @@ const MyNavbar: FC<{ handleService: any }> = ({ handleService }) => {
     return (
         <>
         <Nav>
-            <NavLink to="/home">
-                <BrandLabel>Cars Repair</BrandLabel>
-            </NavLink>
+            <NavLinkBrand to="/home">
+                <BrandLabel>CARS REPAIR</BrandLabel>
+            </NavLinkBrand>
             <Bars />
             <NavMenu>
                 <NavLink to='/about'>

@@ -39,6 +39,8 @@ const Footer: FC = () => {
                     </div>
                 </div>
             </div>
+            <div style={{"color":"white"}}>&copy; Copyright 2022 CARSREPAIR, Inc.
+</div>
         </Container>
         </>
         // <div className={classes.footer}>

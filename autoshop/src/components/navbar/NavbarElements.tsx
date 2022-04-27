@@ -16,6 +16,23 @@ export const Nav = styled.nav`
     z-index:4;
 `
 
+export const NavLinkBrand = styled(Link)`
+    color: #000;
+    opcity:0.5;
+    display: flex;
+    font-weight:700;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    &: hover {
+        opacity:0.5;
+        color:black;
+    }
+
+    
+`
 export const NavLink = styled(Link)`
     color: #000;
     opcity:0.5;
@@ -97,4 +114,5 @@ export const MyCard = styled(Card)`
 export const BrandLabel = styled.h4`
     border: solid;
     padding: 5px;
+    margin-top:8px;
 `
